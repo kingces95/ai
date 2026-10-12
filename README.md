@@ -1,14 +1,14 @@
 # ai-skills
 
-A composable collection of small agent skills. Cross-environment skills may live at the repository root; environment-specific skills live beneath directories such as `desktop`. Every skill directory contains its own `SKILL.md`.
+A composable collection of small agent skills grouped by environment. Repository-governance skills live beneath `meta`; machine-facing skills live beneath environments such as `desktop`. Every skill directory contains its own `SKILL.md`.
 
 Browse the collection by [primary user story](USER-STORIES.md).
 
 ## Skills
 
-### Cross-environment
+### Meta
 
-- [`describe-skill`](describe-skill) — defines the shared schema and repository-wide conformance process.
+- [`describe-skill`](meta/describe-skill) — defines the shared schema and repository-wide conformance process.
 
 ### Desktop
 

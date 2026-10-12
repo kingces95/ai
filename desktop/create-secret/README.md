@@ -8,7 +8,7 @@ The password-manager import itself remains a human action.
 
 ## Skills
 
-- [describe-skill](../../describe-skill) — skill description and composition contract.
+- [describe-skill](../../meta/describe-skill) — skill description and composition contract.
 
 ## Security model
 

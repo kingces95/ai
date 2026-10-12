@@ -1,6 +1,6 @@
 ---
 name: describe-skill
-description: Create or normalize skill directories in the ai-skills repository using its shared schema, concise naming rules, and acyclic dependency model.
+description: Create or normalize skill directories in the ai-skills repository using its meta schema, environment grouping, concise naming rules, and acyclic dependency model.
 ---
 
 # Synopsis
@@ -13,7 +13,7 @@ This is the foundational skill specification and has no skill dependencies.
 
 # Contract
 
-- Keep cross-environment skills at the `ai-skills` root and place environment-specific skills one level beneath an environment directory such as `desktop`. In either case, the skill directory name must equal the `name` in `SKILL.md`.
+- Place repository-governance skills beneath `meta` and machine-facing skills beneath an execution environment such as `desktop`. The skill directory name must equal the `name` in `SKILL.md`.
 - Prefer one clear lowercase word. Otherwise use a short imperative verb–noun name in lowercase kebab-case. Do not add an `ai-` prefix.
 - Include `Synopsis` and `Skills` sections.
 - Give every skill exactly one primary user story in the repository-root `USER-STORIES.md`. Link the skill name to its repository-relative directory and write the blurb in “As a …, I want …, so that …” form.
@@ -27,7 +27,7 @@ This is the foundational skill specification and has no skill dependencies.
 
 For a new skill:
 
-1. Choose the shortest clear name under the naming rule, decide whether the skill is cross-environment or belongs beneath an environment directory, and copy [`templates/SKILL.md`](templates/SKILL.md) into the target directory.
+1. Choose the shortest clear name under the naming rule, select its environment (`meta` for repository governance or an execution environment such as `desktop`), and copy [`templates/SKILL.md`](templates/SKILL.md) into the target directory.
 2. Write a discriminating description that says when the skill applies.
 3. Describe the outcome in `Synopsis`, list direct dependencies in `Skills`, and add its primary story to the root `USER-STORIES.md`.
 4. Add only the constraints and workflow details that change execution decisions.

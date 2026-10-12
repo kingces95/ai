@@ -9,7 +9,7 @@ Use this skill when a user wants an AI to complete an authorized provisioning fl
 
 # Skills
 
-- [describe-skill](../../describe-skill) — skill description and composition contract.
+- [describe-skill](../../meta/describe-skill) — skill description and composition contract.
 
 # Inputs
 

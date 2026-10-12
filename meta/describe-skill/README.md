@@ -1,0 +1,26 @@
+# describe-skill
+
+## Synopsis
+
+Defines the common shape, vocabulary, naming rules, environment grouping, and composition model for skill directories in the `ai-skills` repository. This repository-governance skill lives in `meta`; a skill describes a reusable capability and does not grant permission to perform that capability.
+
+Use [`templates/SKILL.md`](templates/SKILL.md) when starting another skill directory.
+
+## Skills
+
+This is the foundational skill specification and has no skill dependencies.
+
+## Composition model
+
+Each directory containing a `SKILL.md` is a node in a directed acyclic dependency graph. Repository-governance skills live beneath `meta`; machine-facing skills live beneath an execution environment such as `desktop`. An entry in a skill's **Skills** section means that skill directly depends on the referenced skill directory. Reachability, including identity, defines the partial order used to build meta-skills, provisioning flows, and applications.
+
+Dependency composition never composes authorization: every concrete operation still observes its own consent, safety, and confirmation requirements.
+
+## Naming
+
+Prefer one clear lowercase word. When that would be vague, use a short imperative verb–noun name in lowercase kebab-case, such as `create-secret`. Do not prefix individual skills with `ai-`; the `ai-skills` repository already supplies that namespace.
+
+## Conformance passes
+
+Run repository-wide passes whenever the schema evolves. A pass should discover every `SKILL.md` beneath the repository, update names, environment paths, direct dependency links, and the root [`USER-STORIES.md`](../../USER-STORIES.md) consistently, preserve skill-specific meaning and safety boundaries, validate the full dependency graph, and commit the migration as one coherent change.
+
