@@ -8,11 +8,10 @@ Browse the collection by [primary user story](USER-STORY.md).
 
 - [`describe-skill`](describe-skill) — defines the shared schema and repository-wide conformance process.
 - [`create-secret`](create-secret) — stages credentials generated during authorized provisioning flows and produces a password-manager import.
-- [`import-lastpass`](import-lastpass) — adapts staged credentials to LastPass's current import format and guides the human handoff.
 
 ## Naming
 
-Drop repository-level actor prefixes from skill names. Prefer one clear lowercase word; when one word would be vague, use a short imperative verb–noun name such as `create-secret` or `import-lastpass`. The directory name and the `name` in `SKILL.md` must match.
+Drop repository-level actor prefixes from skill names. Prefer one clear lowercase word; when one word would be vague, use a short imperative verb–noun name such as `create-secret`. The directory name and the `name` in `SKILL.md` must match.
 
 ## Composition
 

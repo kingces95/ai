@@ -18,7 +18,7 @@ Dependency composition never composes authorization: every concrete operation st
 
 ## Naming
 
-Prefer one clear lowercase word. When that would be vague, use a short imperative verb–noun name in lowercase kebab-case, such as `create-secret` or `import-lastpass`. Do not prefix individual skills with `ai-`; the `ai-skills` repository already supplies that namespace.
+Prefer one clear lowercase word. When that would be vague, use a short imperative verb–noun name in lowercase kebab-case, such as `create-secret`. Do not prefix individual skills with `ai-`; the `ai-skills` repository already supplies that namespace.
 
 ## Conformance passes
 
