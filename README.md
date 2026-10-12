@@ -2,7 +2,7 @@
 
 A composable collection of small agent skills. Each immediate child directory is one skill and contains its own `SKILL.md`.
 
-Browse the collection by [primary user story](USER-STORY.md).
+Browse the collection by [primary user story](USER-STORIES.md).
 
 ## Skills
 
