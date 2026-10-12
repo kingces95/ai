@@ -6,12 +6,6 @@ Defines a temporary, machine-local provisioning vault for credentials generated 
 
 The password-manager import itself remains a human action.
 
-## Primary user story
-
-> As a user, I want my AI to perform an authorized provisioning flow and create the passwords it needs, so that at the end it can give me those credentials in a format I can import into my password manager.
-
-“Give me” means producing a protected, short-lived import artifact and its non-secret summary. It does not mean printing passwords into chat, logs, command output, or reports.
-
 ## Skills
 
 - [describe-skill](../describe-skill) — skill description and composition contract.
@@ -19,6 +13,7 @@ The password-manager import itself remains a human action.
 ## Security model
 
 - Generate passwords with a cryptographically secure random source and never place them in logs, reports, prompts, or command arguments.
+- Deliver credentials through a protected, short-lived import artifact and non-secret summary rather than printing them into chat, logs, command output, or reports.
 - Keep plaintext out of the model context. The agent reasons over opaque credential identifiers, policy results, metadata, and lifecycle state; a trusted helper performs generation, storage, retrieval for an authorized consumer, export, and destruction.
 - Encrypt records with a random data-encryption key. Protect that key with Windows DPAPI and, when explicitly implemented and verified, a TPM-sealed protector.
 - Store only non-secret indexing metadata in plaintext.

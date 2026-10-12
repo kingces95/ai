@@ -22,5 +22,5 @@ Prefer one clear lowercase word. When that would be vague, use a short imperativ
 
 ## Conformance passes
 
-Run repository-wide passes whenever the schema evolves. A pass should inspect every immediate skill directory, update names and direct dependency links consistently, preserve skill-specific meaning and safety boundaries, validate the full dependency graph, and commit the migration as one coherent change.
+Run repository-wide passes whenever the schema evolves. A pass should inspect every immediate skill directory, update names, direct dependency links, and the root [`USER-STORY.md`](../USER-STORY.md) consistently, preserve skill-specific meaning and safety boundaries, validate the full dependency graph, and commit the migration as one coherent change.
 
