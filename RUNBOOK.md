@@ -1,4 +1,4 @@
-# muse-lastpass — Onboarding Runbook (trial log)
+# ai-lastpass — Onboarding Runbook (trial log)
 
 Trial: 2026-10-11. Onboarding a GitHub machine-user (email `kingces95+muse@gmail.com`,
 GitHub username `kingces95-muse`) using Chris's own LastPass account as the
