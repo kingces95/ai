@@ -12,8 +12,8 @@ The AI remembers the secret together with useful context, reports whether saving
 
 ## Client experience
 
-1. The AI presents inferred service, account, and purpose metadata.
-2. The user copies the secret and chooses to save it.
+1. The AI presents inferred context and a clear control such as **Remember copied secret**.
+2. The user copies the secret and activates the control while it is in the clipboard.
 3. The AI remembers it securely for later authorized use.
 4. The AI forgets it when it is no longer needed.
 

@@ -30,7 +30,9 @@ Use this skill when the user wants the AI to remember a copied secret for later 
 
 # Workflow
 
-Give the user a clear way to save the secret they copied. Remember it securely with useful context, use it later when authorized, and forget it when its purpose is complete.
+When the workflow needs a secret, invite the user to copy it and present a simple capture experience, such as a **Remember copied secret** button. The user activates that experience while the secret is in the clipboard, and the AI confirms whether it was remembered successfully.
+
+Remember the secret securely with useful context, use it later when authorized, and forget it when its purpose is complete.
 
 Choose implementation details that fit the environment. On Windows, Credential Manager may be useful. The [C# secure-memory example](examples/SecureMemoryExample) only illustrates limiting copies and clearing unmanaged buffers; it does not prescribe the solution.
 
