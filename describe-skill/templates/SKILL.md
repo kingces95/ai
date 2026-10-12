@@ -9,7 +9,7 @@ description: <What this skill does and when it applies.>
 
 # Skills
 
-- [describe-skill](../describe-skill) — skill description and composition contract.
+- [describe-skill](<relative-path-to-describe-skill>) — skill description and composition contract.
 - <List other direct skill dependencies, or remove this line.>
 
 # Inputs
