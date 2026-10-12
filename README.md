@@ -13,6 +13,7 @@ Browse the collection by [primary user story](USER-STORIES.md).
 ### Desktop
 
 - [`create-secret`](desktop/create-secret) — stages credentials generated during authorized provisioning flows and produces a password-manager import.
+- [`install-tailscale`](desktop/install-tailscale) — installs and enrolls a desktop with a one-off auth key, then returns the administrator's Machines link and non-secret device status.
 
 ## Naming
 
