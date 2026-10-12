@@ -1,7 +1,11 @@
 ---
-name: <verb-noun>
+name: <skill-name>
 description: <What this skill does and when it applies.>
 ---
+
+# Prompt
+
+<State the intended human outcome. This may be drafted or refined by the AI.>
 
 # Synopsis
 
@@ -9,7 +13,7 @@ description: <What this skill does and when it applies.>
 
 # Skills
 
-- [describe-skill](<relative-path-to-describe-skill>) — skill description and composition contract.
+- [describe-skill](../describe-skill) — skill description and composition contract.
 - <List other direct skill dependencies, or remove this line.>
 
 # Inputs
@@ -26,9 +30,8 @@ description: <What this skill does and when it applies.>
 
 # Workflow
 
-<Describe the minimum reliable workflow without over-constraining implementation.>
+<Describe the outcome declaratively and preserve room for environment-appropriate implementation.>
 
 # Verification
 
 <State how another agent or user can tell the work is complete.>
-
