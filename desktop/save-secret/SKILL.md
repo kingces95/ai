@@ -1,11 +1,11 @@
 ---
 name: save-secret
-description: Securely remember a secret copied by the user so the AI can use it later without exposing it in conversation.
+description: Remember a secret available to the AI for later recall on the local machine without exposing it in conversation.
 ---
 
 # Synopsis
 
-Use this skill when the user wants the AI to remember a copied secret for later use. Keep the secret out of conversation while retaining enough context to use and eventually forget it appropriately.
+Use this skill when the AI has access to a secret that should be remembered for later use on the local machine. The need may be explicit, or a higher-level orchestrator may discover it after assembling enough context.
 
 # Skills
 
@@ -13,30 +13,27 @@ Use this skill when the user wants the AI to remember a copied secret for later 
 
 # Inputs
 
-- A secret copied by the user.
-- The surrounding context and intended later use.
-- The user's explicit action to save it.
+- A secret available to the local workflow.
+- Enough context to recognize it later and understand its intended use.
 
 # Outputs
 
-- The AI remembers the secret and can use it later for the intended purpose.
-- The user knows whether saving succeeded.
+- The AI remembers the secret locally and can recall it when authorized.
+- The workflow knows whether saving succeeded.
 
 # Boundaries
 
 - Never expose the secret in conversation, logs, reports, or other model-visible output.
-- Saving, using, replacing, and forgetting a secret require the authority appropriate to those actions.
+- Remember, use, replace, or forget the secret only with authority appropriate to the surrounding task.
 - Treat remembered context as potentially sensitive too.
 
 # Workflow
 
-When the workflow needs a secret, invite the user to copy it and present a simple capture experience, such as a **Remember copied secret** button. The user activates that experience while the secret is in the clipboard, and the AI confirms whether it was remembered successfully.
+Recognize when a secret should persist beyond its immediate step, whether the need is explicit or discovered through orchestration. Remember it locally with enough context for later recall, and forget it when its purpose is complete.
 
-Remember the secret securely with useful context, use it later when authorized, and forget it when its purpose is complete.
-
-Choose implementation details that fit the environment. On Windows, Credential Manager may be useful. The [C# secure-memory example](examples/SecureMemoryExample) only illustrates limiting copies and clearing unmanaged buffers; it does not prescribe the solution.
+Choose mechanics appropriate to the environment and surrounding workflow.
 
 # Verification
 
-- The AI can use the remembered secret later without asking the user to expose it again.
-- Saving and later use do not reveal the secret in model-visible output.
+- The AI can recall the secret locally for its intended use without asking the user to expose it again.
+- Saving and recall do not reveal the secret in model-visible output.

@@ -7,11 +7,11 @@ Installs Tailscale on an authorized desktop, enrolls it with a supplied one-off 
 ## Skills
 
 - [describe-skill](../../meta/describe-skill) — skill description and composition contract.
-- [save-secret](../save-secret) — remembers the one-time auth key for later use and forgets it when finished.
+- [accept-secret](../accept-secret) — accepts and remembers the user's one-time auth key without exposing it.
 
 ## Security model
 
-- Use the one-time auth key remembered with `save-secret` without exposing it.
+- Use the one-time auth key remembered with `accept-secret` without exposing it.
 - Inject the key directly into the Tailscale enrollment process without placing it in prompts, command arguments, shell history, files, logs, or reports.
 - Do not retry an uncertain enrollment blindly because a one-off key may already have been consumed.
 - Do not infer administrator completion merely from opening the Machines link. Offer a suitable way to report or observe completion.

@@ -10,12 +10,12 @@ Use this skill when a user wants the AI to install Tailscale on an authorized de
 # Skills
 
 - [describe-skill](../../meta/describe-skill) — skill description and composition contract.
-- [save-secret](../save-secret) — remember the one-time key for later use and forget it when finished.
+- [accept-secret](../accept-secret) — accept and remember the user's one-time key without exposing it.
 
 # Inputs
 
 - Explicit authorization to install or modify Tailscale on the desktop.
-- A one-time Tailscale auth key remembered with `save-secret`, never supplied as prompt text.
+- A one-time Tailscale auth key accepted and remembered with `accept-secret`, never supplied as prompt text.
 - Any non-secret enrollment settings the administrator requires, such as an approved hostname. Treat tags and other privileges encoded in the key as administrator-controlled policy.
 
 # Outputs
