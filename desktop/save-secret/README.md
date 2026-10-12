@@ -2,9 +2,9 @@
 
 ## Synopsis
 
-Captures a user-supplied secret from the clipboard through an explicit local action, stores it in the operating system's private credential store, and gives later provisioning steps an opaque reference instead of the value.
+Securely remembers a secret copied by the user so the AI can use it later without exposing it in conversation.
 
-The AI supplies and reviews contextual metadata. A separate local helper performs the secret-bearing operation, so the clipboard value never enters chat, prompts, command arguments, logs, or ordinary tool output.
+The AI remembers the secret together with useful context, reports whether saving worked, and forgets it when its purpose is complete.
 
 ## Skills
 
@@ -13,9 +13,9 @@ The AI supplies and reviews contextual metadata. A separate local helper perform
 ## Client experience
 
 1. The AI presents inferred service, account, and purpose metadata.
-2. The user copies the secret and selects **Capture clipboard and save**.
-3. A local helper stores it in an appropriate private store and may offer to clear the clipboard.
-4. The AI receives an opaque reference and non-secret status for later authorized use.
+2. The user copies the secret and chooses to save it.
+3. The AI remembers it securely for later authorized use.
+4. The AI forgets it when it is no longer needed.
 
 Clearing the current clipboard cannot retract data already retained by clipboard history, synchronized devices, or other software.
 
@@ -23,4 +23,4 @@ Clearing the current clipboard cannot retract data already retained by clipboard
 
 [`examples/SecureMemoryExample`](examples/SecureMemoryExample) is a deliberately narrow C# illustration of copying sensitive characters into unmanaged memory, allowing a consumer to use the pointer, and zeroing both source and unmanaged buffers afterward.
 
-It is not a clipboard reader, credential-store client, or mandated implementation. An AI is expected to devise the helper, storage, discovery, and retirement mechanics appropriate to its environment while preserving the client experience and security boundary.
+It is not a clipboard reader, credential-store client, or mandated implementation. The executing AI chooses mechanics appropriate to its environment while preserving the client experience and security boundary.

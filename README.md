@@ -13,7 +13,7 @@ Browse the collection by [primary user story](USER-STORIES.md).
 ### Desktop
 
 - [`create-secret`](desktop/create-secret) — stages credentials generated during authorized provisioning flows and produces a password-manager import.
-- [`save-secret`](desktop/save-secret) — captures a user-supplied clipboard secret into a local private store and returns an opaque reference.
+- [`save-secret`](desktop/save-secret) — securely remembers a secret copied by the user so the AI can use it later.
 - [`install-tailscale`](desktop/install-tailscale) — installs and enrolls a desktop with a one-off auth key, then returns the administrator's Machines link and non-secret device status.
 
 ## Naming
