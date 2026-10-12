@@ -1,21 +1,22 @@
 ---
-name: ai-skill
-description: Define, document, and compose small agent skills as dependency-aware repositories using a shared template and an acyclic composition model.
+name: describe-skill
+description: Create or normalize skill directories in the ai-skills repository using its shared schema, concise naming rules, and acyclic dependency model.
 ---
 
 # Synopsis
 
-Use this skill to create or revise a repository that represents one reusable agent capability. Keep the contract small, explicit, and composable.
+Use this skill to create a reusable skill directory or run a repository-wide conformance pass when the shared schema changes. Keep each contract small, explicit, and composable.
 
 # Skills
 
-This is the foundational skill specification and has no dependencies.
+This is the foundational skill specification and has no skill dependencies.
 
 # Contract
 
-- Give the repository an `<actor>-<capability>` name using lowercase kebab-case.
+- Make each skill an immediate child directory of `ai-skills` and keep its directory name equal to the `name` in `SKILL.md`.
+- Prefer one clear lowercase word. Otherwise use a short imperative verb–noun name in lowercase kebab-case. Do not add an `ai-` prefix.
 - Include `Synopsis` and `Skills` sections.
-- In `Skills`, link every direct dependency by repository name. Do not list transitive dependencies.
+- In `Skills`, link every direct dependency by sibling directory name. Do not list transitive dependencies.
 - Keep the dependency graph acyclic. Reachability, including identity, is the composition partial order.
 - Treat skills as capability descriptions, never as standing authorization.
 - State inputs, outputs, security boundaries, confirmation points, and observable completion conditions when they materially affect correct use.
@@ -23,10 +24,18 @@ This is the foundational skill specification and has no dependencies.
 
 # Workflow
 
-1. Start from [`templates/SKILL.md`](templates/SKILL.md).
+For a new skill:
+
+1. Choose the shortest clear name under the naming rule and copy [`templates/SKILL.md`](templates/SKILL.md) into that sibling directory.
 2. Write a discriminating description that says when the skill applies.
-3. Describe the outcome in `Synopsis`.
-4. List direct dependencies in `Skills`.
-5. Add only the constraints and workflow details that change execution decisions.
-6. Verify links, dependency acyclicity, and the absence of unresolved template markers.
+3. Describe the outcome in `Synopsis` and list direct dependencies in `Skills`.
+4. Add only the constraints and workflow details that change execution decisions.
+
+For a conformance pass:
+
+1. Inspect every immediate skill directory before editing.
+2. Apply the schema change consistently while preserving skill-specific intent, history, and safety boundaries.
+3. Update all affected names, links, templates, and repository indexes together.
+4. Verify frontmatter, folder/name equality, direct dependency links, graph acyclicity, and the absence of unresolved placeholders in active skills.
+5. Commit the pass as one coherent repository change.
 

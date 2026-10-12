@@ -1,4 +1,4 @@
-# ai-lastpass
+# import-lastpass
 
 ## Synopsis
 
@@ -8,6 +8,6 @@ The historical onboarding observations are retained in [`RUNBOOK.md`](RUNBOOK.md
 
 ## Skills
 
-- [ai-skill](../ai-skill) — skill description and composition contract.
-- [ai-secrets](../ai-secrets) — encrypted staging, export lifecycle, and cleanup contract.
+- [describe-skill](../describe-skill) — skill description and composition contract.
+- [create-secret](../create-secret) — encrypted staging, export lifecycle, and cleanup contract.
 

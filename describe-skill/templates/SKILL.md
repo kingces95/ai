@@ -1,5 +1,5 @@
 ---
-name: <actor-capability>
+name: <verb-noun>
 description: <What this skill does and when it applies.>
 ---
 
@@ -9,7 +9,7 @@ description: <What this skill does and when it applies.>
 
 # Skills
 
-- [ai-skill](../ai-skill) — skill description and composition contract.
+- [describe-skill](../describe-skill) — skill description and composition contract.
 - <List other direct skill dependencies, or remove this line.>
 
 # Inputs

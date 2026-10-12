@@ -1,4 +1,4 @@
-# ai-secrets
+# create-secret
 
 ## Synopsis
 
@@ -14,7 +14,7 @@ The password-manager import itself remains a human action.
 
 ## Skills
 
-- [ai-skill](../ai-skill) — skill description and composition contract.
+- [describe-skill](../describe-skill) — skill description and composition contract.
 
 ## Security model
 

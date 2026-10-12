@@ -1,5 +1,5 @@
 ---
-name: ai-lastpass
+name: import-lastpass
 description: Prepare a LastPass-compatible import from locally staged credentials and guide a human through manual import, verification, and subsequent staging cleanup.
 ---
 
@@ -9,8 +9,8 @@ Use this skill at the password-manager handoff boundary of a provisioning flow. 
 
 # Skills
 
-- [ai-skill](../ai-skill) — skill description and composition contract.
-- [ai-secrets](../ai-secrets) — encrypted credential staging and retirement.
+- [describe-skill](../describe-skill) — skill description and composition contract.
+- [create-secret](../create-secret) — encrypted credential staging and retirement.
 
 # Boundaries
 
@@ -26,7 +26,7 @@ Use this skill at the password-manager handoff boundary of a provisioning flow. 
 3. Generate the temporary CSV with restrictive local permissions and validate its structure without printing secret values.
 4. Give the user the file location and concise manual import instructions.
 5. Ask the user to verify representative entries in LastPass.
-6. On explicit confirmation, invoke the cleanup lifecycle defined by `ai-secrets`.
+6. On explicit confirmation, invoke the cleanup lifecycle defined by `create-secret`.
 
 # Verification
 

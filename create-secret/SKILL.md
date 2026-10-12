@@ -1,5 +1,5 @@
 ---
-name: ai-secrets
+name: create-secret
 description: Perform authorized provisioning flows with agent-generated credentials kept outside model context, then deliver a short-lived password-manager import and retire staging data after user verification.
 ---
 
@@ -9,7 +9,7 @@ Use this skill when a user wants an AI to complete an authorized provisioning fl
 
 # Skills
 
-- [ai-skill](../ai-skill) — skill description and composition contract.
+- [describe-skill](../describe-skill) — skill description and composition contract.
 
 # Inputs
 
