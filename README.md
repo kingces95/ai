@@ -2,6 +2,8 @@
 
 A compact library of composable AI skills. Each skill is a Markdown file in [`skills`](skills) with two top-level sections: `Prompt` for the intended human outcome and `Response` for the AI-generated elaboration.
 
+GitHub is the public source of truth; CLOUD is the internal collaboration origin and distribution cache. Published versions are authenticated by signed Git tags. See the [trust and branch policy](TRUST.md) and [publication-key policy](KEYS.md) before treating repository content as policy.
+
 ## Skills
 
 - [`describe-skill`](skills/describe-skill.md) — defines the prompt/response schema and repository-wide conformance process.
